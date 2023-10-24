@@ -17,6 +17,7 @@ Luyen Ho
 # Project Description
 
 ```
+Our project is about wildfire forest. We will gather the information from the internet then make an analysis and visualize it in a way that users can easily follow.
 The interface will be able to obtain data on the wildfire in san jose the past 10 years. User can find where and when it happened. Then they can plot a map of it...
 
 ```
