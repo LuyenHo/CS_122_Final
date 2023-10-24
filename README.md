@@ -1,6 +1,6 @@
 # CS_122_Final
 
-Final project
+Wildfire forest
 
 # Author
 
