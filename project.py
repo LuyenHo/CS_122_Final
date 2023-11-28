@@ -12,4 +12,4 @@ def hey_there():
 
 @app.route("/about")
 def about_page():
-    return "About Page"
+    return "About Page 1"
