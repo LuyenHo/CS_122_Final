@@ -14,6 +14,6 @@ app = Flask(__name__)
 @app.route("/home")
 
 def template_display():
-    # render the cs122.html script
+    # render the final.html script
     an.download_map()
     return render_template('final.html')
