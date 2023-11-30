@@ -1,31 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
-<!--This is the header of the html script-->
 <head>
+    <title>Wildfires</title>
+    <meta name="description">
+    <style>
+        /* Center the map image */
+        .centered-map {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-<!--Add a title to this html script-->
-<title>Wildfires</title>
-
-<!--Add a description to this html script-->
-<meta name="description"  >
-
+        /* Additional styles for the image */
+        .centered-map img {
+            max-width: 100%;
+            max-height: 70vh;
+        }
+    </style>
 </head>
 
-
-
-<!--This is the body of the html script-->
 <body>
 
-<!--Write some header text-->
-This is a simplt page for CS 122<br><br>
+    <div class="centered-map">
+        <!--Write some header text-->
+        <p>This is a simple page for CS 122</p>
+        <p>Below is the wildfires map</p>
 
-<!--Add text for a title on the image-->
-Below is the wildfires map<br>
+        <!--Add the map image-->
+        <img src="{{ url_for('static', filename='map.png') }}" alt="Wildfires Map">
+    </div>
 
-<!--Add the Python logo image-->
-<img src="static/map.png", alt="fires map">
 </body>
-
 
 </html>
