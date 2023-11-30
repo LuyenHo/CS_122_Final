@@ -1,9 +1,9 @@
 import requests as rq
-# from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup
 
 def download_map():
     # define a url to the web page
-    url = 'https://www.frontlinewildfire.com/wp-content/uploads/2020/09/CALIFORNIA-FIRE-MAP.jpeg'
+    url = 'https://www.caliper.com/featured-maps/maptitude-california-fire.jpg'
 
     # use the requests package to read the page to a response
     response = rq.get(url)
