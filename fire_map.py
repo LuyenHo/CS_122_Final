@@ -5,7 +5,7 @@ import io
 
 def generate_map_html():
     # Read the CSV file
-    df = pd.read_csv('C:/Users/Acer/Desktop/College/Fall2023/cs122/CS 122-20231016T183640Z-001/CS 122/CS_122_Final/CS_122_Final/California_Fire_Incidents.csv')
+    df = pd.read_csv('static/California_Fire_Incidents.csv')
 
     # Select the fire data
     df_select = df[df.Longitude < -115]

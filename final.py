@@ -20,6 +20,6 @@ def get_fire_map():
 def home_page_display():
     # render the final.html script
     an.download_map()
-    an.get_data()
+    # an.get_data()
     return render_template('final.html')
 
