@@ -13,7 +13,9 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/home")
 
-def template_display():
+def home_page_display():
     # render the final.html script
     an.download_map()
+    an.get_data()
     return render_template('final.html')
+
