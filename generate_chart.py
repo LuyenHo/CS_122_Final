@@ -1,6 +1,6 @@
 import numpy as np
-import matplotlib
-matplotlib.use("Agg")
+#import matplotlib
+#matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -11,7 +11,6 @@ def generate_chart():
 
     # plot Acres Burned vs Year
     # fig, ax = plt.subplots(figsize=(16, 4))
-    # ax.plot(acres_sum.index, acres_sum, color='red')
     # ax.set_xlabel('Archive Year')
     # ax.set_ylabel('Acres Burned')
     # plt.ylabel('AcresBurned')
@@ -21,7 +20,8 @@ def generate_chart():
     # fig.savefig(image_path)
 
     #window
-    plt.figure(figsize=(16, 4))
+    plt.figure(figsize=(14, 4))
+    plt.plot(acres_sum.index, acres_sum, color='red')
     plt.xlabel('Archive Year')
     plt.title('Wildfire from 2013 to 2019')
     plt.grid()
