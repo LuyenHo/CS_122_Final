@@ -23,6 +23,7 @@ def generate_chart():
     plt.figure(figsize=(14, 4))
     plt.plot(acres_sum.index, acres_sum, color='red')
     plt.xlabel('Archive Year')
+    plt.ylabel('AcresBurned')
     plt.title('Wildfire from 2013 to 2019')
     plt.grid()
     plt.show()
