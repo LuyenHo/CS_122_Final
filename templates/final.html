@@ -30,6 +30,7 @@
 </head>
 
 <body>
+    {{ chart_html | safe }}
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Wildfires</a>
@@ -47,7 +48,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#" onclick="showMapPopup()">Interactive Fire Map</a>
                         <a class="dropdown-item" href="#" onclick="showCountiesPlot()">Counties Affected</a>
-                        <a class="dropdown-item" href="#">Option 3</a>
+                        <a class="dropdown-item" href="#" onclick="showChartPlot()">Chart</a>
                         <a class="dropdown-item" href="#">Option 4</a>
                     </div>
                 </li>
@@ -84,6 +85,21 @@
                 </div>
                 <div class="modal-body">
                     <img id="countiesPlotImage" src="" alt="Counties Plot">
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Chart generate -->
+     <div class="modal" id="chartPlotModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Chart Plot</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <img id="chartPlotImage" src="" alt="chart Plot">
                 </div>
             </div>
         </div>
@@ -127,6 +143,20 @@
                 success: function(response) {
                     $('#countiesPlotImage').attr('src', 'data:image/png;base64,' + response);
                     $('#countiesPlotModal').modal('show');
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
+                }
+            });
+        }
+
+        function showChartPlot() {
+            $.ajax({
+                url: '/chart_plot',
+                type: 'GET',
+                success: function(response) {
+                    $('#chartPlotImage').attr('src', 'data:image/png;base64,' + response);
+                    $('#chartPlotModal').modal('show');
                 },
                 error: function(xhr, status, error) {
                     console.error("Error:", error);
