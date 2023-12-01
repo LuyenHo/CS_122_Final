@@ -3,13 +3,11 @@ import matplotlib.pyplot as plt
 
 def generate_counties_plot():
     df = pd.read_csv('static/California_Fire_Incidents.csv')
-    fig, ax = plt.subplots(figsize=(16,4))
+    plt.figure(figsize=(16,4))
     df.Counties.value_counts()[0:20].plot(kind='bar')
-    ax.set_title('Top 20 affected Counties')
-    ax.grid()
-    image_path = 'static/country_affect.png'
-    plt.show()
+    plt.title('Top 20 affected Counties')
+    plt.grid()
+    # plt.show()
     plt.close()
-    fig.savefig(image_path)
-    return image_path
+    return plt.subplots()
 
